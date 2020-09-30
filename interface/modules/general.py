@@ -9,35 +9,6 @@ import json
 from json2html import *
 import config
 
-def ConvertJSONNew(filePath):
-    """
-    Loads, converts a JSON file to HTML, and opens the file.
-    """
-    data = ""
-    htmlTable = ""
-    errorMsg = None
-    reportFile = "report.html"
-
-    # HTML start
-    htmlStart = "<html><head><style>table {font-family: Ariel, sans-serif; text-align: center; border-spacing: 20px; border: 3px solid; border-color: gray;}</style></head><body>"
-
-    # HTML end
-    htmlEnd = "</body></html>"
-
-    # Construct HTMl file
-    html = htmlStart + htmlTable + htmlEnd
-
-    # Save temp HTML file
-    if errorMsg is None:
-        try:
-            htmlSave = open(reportFile, "w")
-            htmlSave.write(html)
-            htmlSave.close()
-        except Exception as e:
-            errorMsg = str(e)
-
-    return reportFile, reportString, errorMsg
-
 def ConvertJSON(filePath):
     """
     Loads, converts a JSON file to HTML, and opens the file.
@@ -48,16 +19,7 @@ def ConvertJSON(filePath):
     reportFile = "report.html"
 
     # HTML start
-    # New
     htmlStart = "<html><head><style>table {min-width: 500px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); margin: 25px 0; font-family: Ariel, sans-serif; text-align: left; border-spacing: 20px; border-bottom: 1px solid; border-color: black;}</style></head><body>"
-    # White
-    #htmlStart = "<html><head><style>table {font-family: Ariel, sans-serif; text-align: center; border-spacing: 20px; border: 3px solid; border-color: gray;}</style></head><body>"
-
-    #htmlStart = "<html><head><style>table {text-align: left; border-spacing: 20px; border: 3px solid; border-color: gray; background-color: #d3d3d3;}</style></head><body>"
-
-    # Original
-    #htmlStart = "<html><body><head><style>table {padding-left: 0px; padding-right: 0px; border: 5px transparent solid; border-collapse: separate; border-spacing: 20px; padding: 1px;}</style></head>"
-
 
     # HTML end
     htmlEnd = "</body></html>"
