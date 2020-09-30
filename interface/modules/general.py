@@ -34,7 +34,6 @@ def ConvertJSON(filePath):
     # Convert JSON data to HTML
     if errorMsg is None:
         try:
-            #htmlTable = json2html.convert(json=data)
             htmlTable = json2html.convert(json=data, table_attributes="id=\"summary-report\"")
         except Exception as e:
             errorMsg = str(e)

@@ -32,6 +32,10 @@ class ReportInterface(threading.Thread):
         # Instantiate report object
         try:
             report = Report(self.reportTitle, self.modelName, self.imgDir, self.confThresh)
+
+            # Remove previous images if they exist in processed_images list in reporty.py
+            if len(report.processed_images) > 0:
+                report.processed_images = []
         except Exception as e:
             self.errors.append(str(e))
 
