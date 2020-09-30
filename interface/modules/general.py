@@ -19,69 +19,10 @@ def ConvertJSONNew(filePath):
     reportFile = "report.html"
 
     # HTML start
-    # White
     htmlStart = "<html><head><style>table {font-family: Ariel, sans-serif; text-align: center; border-spacing: 20px; border: 3px solid; border-color: gray;}</style></head><body>"
-
-    # Grey
-    #htmlStart = "<html><head><style>table {text-align: left; border-spacing: 20px; border: 3px solid; border-color: gray; background-color: #d3d3d3;}</style></head><body>"
-
-    # Original
-    #htmlStart = "<html><body><head><style>table {padding-left: 0px; padding-right: 0px; border: 5px transparent solid; border-collapse: separate; border-spacing: 20px; padding: 1px;}</style></head>"
-
 
     # HTML end
     htmlEnd = "</body></html>"
-
-    # Load JSON file
-    try:
-        with open(filePath) as jsonFile:
-            data = json.load(jsonFile)
-    except Exception as e:
-        errorMsg = str(e)
-
-    # Get values from JSON data
-    reportTitle = "Not set"
-    modelName = "Not set"
-    confThresh = "Not set"
-    totalImages = "Not set"
-    positiveImages = "Not set"
-    emptyImages = "Not set"
-    try:
-
-        # Report Title Data
-        reportData = data["report_title"]
-
-        for item in reportData:
-            reportTitle = item.pop("report_title")
-
-        # About Object Detector Data
-        aboutData = data["About Object Detector"]
-
-        for item in aboutData:
-            modelName = item.pop("Model")
-            confThresh = item.pop("Confidence Threshold")
-
-        # Object Detection Data
-        detectionData = data["Object Detection Information"]
-
-        for item in detectionData:
-            totalImages = item.pop("Total Images")
-            positiveImages = item.pop("Positive Images")
-            emptyImages = item.pop("Empty Images")
-    except Exception as e:
-        print("Could not get JSON data. Reason: " + str(e)) # DEBUG
-
-    # Construct summary report string
-    reportString = "Unable to create summary report."
-    try:
-        reportString = "\n\nSummary Report\n\nReport Title: " + reportTitle + "\n\nAbout Object Detector"
-        reportString += "\nModel Name: " + modelName + "\nConfidence Threshold: " + confThresh + "\n\nObject Detection Information"
-        reportString += "\nTotal Images: " + str(totalImages) + "\nPositive Images: " + positiveImages + "\nEmpty Images: " + emptyImages
-        print(reportString) # DEBUG
-    except Exception as e:
-        print("Could not create summary report. Reason: " + str(e)) # DEBUG
-
-    # Create HTML table
 
     # Construct HTMl file
     html = htmlStart + htmlTable + htmlEnd
