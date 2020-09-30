@@ -6,7 +6,7 @@
 ## U-Infuse App Installation
 
 #### Windows
-* Go to releases page to download the Windows installation wizard and follow the prompts.
+* Go to releases page to download the Windows installation wizard and follow the prompts (Ignore security warning).
 
 #### Universal Installer on Centos Systems:
  * Download modules.zip and build_universal_install_u-infuse1.30.sh
