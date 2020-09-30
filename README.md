@@ -8,7 +8,7 @@
 
 * Universal Installer on Centos Systems:
 
- * Download modules.zip and build_universal_install_u-infuse1.30.sh
+ * * Download modules.zip and build_universal_install_u-infuse1.30.sh
  * Make a directory called U_Infuse and then put the downloaded files into it
  * Open a cmd window and go into U_Infuse using cmd cd U_Infuse
  * Run the cmd sh ./build_universal_install_u-infuse1.30.sh (you may have to authenticate first, e.g. setproxy, then put in your username and password)
