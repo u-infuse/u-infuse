@@ -235,7 +235,6 @@ def RunInferenceButton(self):
     """
     Run inference on selected model.
     """
-    print(self.confThresh) #DEBUG
     # Set self.cancelPreview value
     self.cancelPreview = False
 
