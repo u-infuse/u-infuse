@@ -5,18 +5,9 @@
 # Purpose: U-Infuse universal installer.
 
 # Create directories.
-echo "U-Infuse installer requires: TensorFlow 1.14.x - 1.15.x, git and unzip." 
+echo "U-Infuse installer requires: TensorFlow 1.14.x - 1.15.x, git and unzip."
 
 read -p "Press enter to continue."
-
-
-echo "Creating U-Infuse directory."
-if [ -d "U-Infuse" ]; then
-	echo "U-Infuse directory already exists. Skipping."
-else
-	mkdir U-Infuse
-	echo "Created directory: U-Infuse"
-fi
 
 echo "Creating datasets directory."
 if [ -d "datasets" ]; then
@@ -98,13 +89,13 @@ else
 	echo "QImage2ndArray is already installed"
 fi
 
-# Install json2html
-json2html_out=$(pip3 show json2html)
-if echo "not found" | grep -q "$json2html_out"; then
-	echo "json2html is not installed. Installing..."
-	pip3 install --user json2html
+# Install json2table
+json2table_out=$(pip3 show json2table)
+if echo "not found" | grep -q "$json2table_out"; then
+	echo "json2table is not installed. Installing..."
+	pip3 install --user json2table
 else
-	echo "json2html is already installed"
+	echo "json2table is already installed"
 fi
 
 # Install scikit-build
@@ -151,4 +142,3 @@ mv modules/u-infuse.sh u-infuse.sh
 
 # Run U-Infuse
 sh ./u-infuse.sh
-

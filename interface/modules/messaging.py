@@ -10,7 +10,7 @@ def BannedWords(output):
     Remove output that contains words and phrases that should not be printed.
     """
     # Variables
-    bannedWords = ["UserWarning", "Parsing annotations"]
+    bannedWords = ["UserWarning", "Parsing annotations", "Failed to execute script", "exceeds 10%"]
 
     try:
         for bWord in bannedWords:
