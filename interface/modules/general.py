@@ -322,15 +322,17 @@ def OpenLabelImg(imageDir, classFile):
     """
     Opens labelImg if it is installed.
     """
-    error = False
-    errorMsg = ""
+    errorMsg = None
+
     try:
-        os.system("start labelimg " + imageDir + " " + classFile)
+        if os.name == "nt":
+            os.system("start labelimg " + imageDir + " " + classFile)
+        else:
+            os.system("labelImg " + imageDir + " " + classFile)
     except Exception as e:
-        error = True
         errorMsg = str(e)
 
-    return error, errorMsg
+    return errorMsg
 
 def GetCSVName(modelName):
     """

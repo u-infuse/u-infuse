@@ -62,7 +62,6 @@ unzip modules.zip -d modules
 
 # Install PySide2
 pyside2_out=$(pip3 show PySide2)
-#if [[ $pyside2_out == *"not found: "* ]]; then
 if echo "not found" | grep -q "$pyside2_out"; then
 	echo "PySide2 not installed. Installing..."
 	pip3 install --user PySide2

@@ -201,7 +201,7 @@ class UInfuse(QtWidgets.QMainWindow):
 
     def closeEvent(self, event):
         """
-        Overide closeEvent to provide a messagebox for when the "X" button is
+        Override closeEvent to provide a messagebox for when the "X" button is
         clicked.
         """
         exitMessage = QtWidgets.QMessageBox.Yes

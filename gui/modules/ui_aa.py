@@ -102,8 +102,7 @@ def OpenLabelImg(self):
     imgDir = os.path.join(config.datasets, dataSet)
     modelName = ""
     modelDir = ""
-    error = False
-    errorMsg = ""
+    errorMsg = None
 
     # Set variables
     try:
@@ -121,11 +120,9 @@ def OpenLabelImg(self):
     mapPath, mapFileFound = general_error.GetMapPath(modelName, modelDir)
 
     if mapFileFound:
-        error, errorMsg = general.OpenLabelImg(imgDir, mapPath)
-    else:
-        error = True
+        errorMsg = general.OpenLabelImg(imgDir, mapPath)
 
-    if error:
+    if errorMsg is not None:
         errorMessage = "Could not open labelImg. Reason: " + errorMsg
         self.autoAnnotateDialogue.textEdit.append(errorMessage)
 
