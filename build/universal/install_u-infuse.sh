@@ -60,6 +60,15 @@ fi
 # Unzip modules to modules directory.
 unzip modules.zip -d modules
 
+# Install labelImg
+labelImg_out=$(pip3 show labelImg)
+if echo "not found" | grep -q "$labelImg_out"; then
+	echo "labelImg is not installed. Installing..."
+	pip3 install --user labelImg
+else
+	echo "labelImg is already installed"
+fi
+
 # Install PySide2
 pyside2_out=$(pip3 show PySide2)
 if echo "not found" | grep -q "$pyside2_out"; then
