@@ -32,3 +32,5 @@
   11. If you wish to edit the annotations, download and use labelImg (https://github.com/tzutalin/labelImg)
   12. Once annotations are complete, follow steps 7-9
   
+## Sample Workflow
+<img width="3967" alt="u_infuse" src="https://user-images.githubusercontent.com/39542635/113983774-ab7f7600-988d-11eb-9271-15f45c6a51c5.png">
