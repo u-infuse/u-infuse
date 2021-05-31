@@ -1,7 +1,7 @@
 # U-Infuse
 
 This repository contains the official implementation of the software application described in the manuscript:
-U-Infuse: Democratization of Customizable Deep Learning for Object Detection (doi.org/10.3390/s21082611) 
+[U-Infuse: Democratization of Customizable Deep Learning for Object Detection](doi.org/10.3390/s21082611) 
 
 ## Available Object Detection Frameworks
 * RetinaNet
