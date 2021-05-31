@@ -22,7 +22,7 @@ This repository contains the official implementation of the software application
  * Done! U-Infuse should now be ready to use.
  
  ## Using the Jupyter Notebooks
-  1. Install keras-retinanet by following the instructions on https://github.com/fizyr/keras-retinanet
+  1. Install [keras-retinanet] (https://github.com/fizyr/keras-retinanet)
   2. Git clone this repository
   3. Place your images in the datasets directory
   4. Place the corresponding annotations (if you have them) in the annotations directory
@@ -32,7 +32,7 @@ This repository contains the official implementation of the software application
   8. Once training is complete, go to the U-Infuse RetinaNet Preview Custom Models Jupyter Notebook to select and export your model
   9. You can then use your model for inference/object detection by using the U-Infuse RetinaNet Run Object Detection and Generate Reports Jupyter Notebook
   10. If you do not have annotated images, you can auto-annotate your images using the U-Infuse RetinaNet Auto-annotator Jupyter Notebook
-  11. If you wish to edit the annotations, download and use labelImg (https://github.com/tzutalin/labelImg)
+  11. If you wish to edit the annotations, download and use [labelImg] (https://github.com/tzutalin/labelImg)
   12. Once annotations are complete, follow steps 7-9
   
 ## Sample Workflow
