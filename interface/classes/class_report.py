@@ -6,6 +6,7 @@ Purpose: Class interfaces with the report class.
 """
 import threading
 import os
+from pathlib import Path
 from report import Report
 from inference_image import Inference_Image
 
@@ -44,6 +45,11 @@ class ReportInterface(threading.Thread):
             for data in self.imgData:
                 # Get inferred image
                 imgPath = os.path.join(self.imgDir, data[2])
+
+                # Change imgPath for Windows
+                if os.name == "nt":
+                    imgPath = Path(self.imgDir) / data[2]
+
                 objData = data[1]
                 inferredImage = Inference_Image(data[2], imgPath, objData)
 
