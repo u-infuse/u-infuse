@@ -314,7 +314,7 @@ def UpdateCombos(self):
         self.updateAADatasets = modelList
 
         # Insert pretrained models
-        error, errorMsg = ui_general.InsertModels(self, self.autoAnnotateDialogue, modelList)
+        error, errorMsg = ui_general.InsertModels(self.autoAnnotateDialogue, modelList)
         if error:
             errorMessage = "Could not add datasets to dialogue. Reason: " + errorMsg
             self.autoAnnotationDialogue.textEdit.append(errorMessage)
