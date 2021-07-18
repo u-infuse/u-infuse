@@ -9,7 +9,7 @@ This repository contains the official implementation of the software application
 ## U-Infuse App Installation
 
 #### Windows
-* Go to releases page to download the Windows installation wizard and follow the prompts (Ignore security warning).
+* Click [here](https://github.com/u-infuse/u-infuse/releases/download/v1.0.0/U-Infuse-win-1.0.3.exe) to download U-Infuse for Windows. Step through the Windows installation wizard and follow the prompts (Ignore security warning).
 
 #### Universal Installer on Centos Systems:
  * Download modules.zip and build_universal_install_u-infuse1.30.sh
