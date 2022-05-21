@@ -5,6 +5,7 @@ This repository contains the official implementation of the software application
 
 ## Available Object Detection Frameworks
 * RetinaNet
+* RetinaNet models can be downloaded [here](https://myune-my.sharepoint.com/:f:/g/personal/asheple2_une_edu_au/Ersvml1rr-dHjo5cB8hxy8EBPqtPyncDdvRQ1zGD_CmRXQ?e=4aGej3)
 
 ## U-Infuse App Installation
 
